@@ -1,27 +1,27 @@
-import 'package:get/get.dart';
-import 'package:on_audio_query/on_audio_query.dart';
-import 'package:permission_handler/permission_handler.dart';
+// import 'package:get/get.dart';
+// import 'package:on_audio_query/on_audio_query.dart';
+// import 'package:permission_handler/permission_handler.dart';
 
-class PlayersControllers extends GetxController {
-  final audioQuery = OnAudioQuery();
+// class PlayersControllers extends GetxController {
+//   final audioQuery = OnAudioQuery();
 
-  @override
-  void onInit() {
-    super.onInit();
-    checkpermission();
-  }
+//   @override
+//   void onInit() {
+//     super.onInit();
+//     checkpermission();
+//   }
 
-  checkpermission() async {
-    var perm = await Permission.storage.request();
-    if (perm.isGranted) {
-      return audioQuery.querySongs(
-        ignoreCase: true,
-        orderType: OrderType.ASC_OR_SMALLER,
-        sortType: null,
-        uriType: UriType.EXTERNAL,
-      );
-    } else {
-      checkpermission();
-    }
-  }
-}
+//   checkpermission() async {
+//     var perm = await Permission.storage.request();
+//     if (perm.isGranted) {
+//       return audioQuery.querySongs(
+//         ignoreCase: true,
+//         orderType: OrderType.ASC_OR_SMALLER,
+//         sortType: null,
+//         uriType: UriType.EXTERNAL,
+//       );
+//     } else {
+//       checkpermission();
+//     }
+//   }
+// }

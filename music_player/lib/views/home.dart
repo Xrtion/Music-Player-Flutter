@@ -9,7 +9,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = Get.put(PlayersControllers());
+    // var controller = Get.put(PlayersControllers());
 
     return Scaffold(
       backgroundColor: bgDarkColor,
